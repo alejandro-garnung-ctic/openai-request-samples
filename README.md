@@ -22,7 +22,7 @@ cp .env.example .env
 
 ## Modelos disponibles
 
-| Modelo                                            | Tipo / Descripción probable                                                        |
+| Modelo                                            | Tipo / Descripción                                                                 |
 | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | **BAAI/bge-reranker-v2-m3**                       | Modelo **Reranker** (para ordenar resultados, búsquedas)                           |
 | **cpatonn/Qwen3-VL-32B-Instruct-AWQ-4bit**        | Modelo multimodal **VL** (Vision + Language), Instruct, 32B parámetros, 4bit quant |

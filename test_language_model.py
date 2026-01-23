@@ -42,7 +42,6 @@ def chat_completion(model_name: str, prompt: str):
     data = response.json()
 
     # Acceso típico a la respuesta en estructura chat completions
-    # Ajusta si tu API es distinta
     try:
         content = data["choices"][0]["message"]["content"]
         return content
