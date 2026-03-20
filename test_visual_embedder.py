@@ -6,7 +6,7 @@ Uso:
     python scripts/test_embedder_image.py --model Qwen/Qwen3-VL-Embedding-8B --image /ruta/foto.jpg
 
 Variables de entorno (opcional):
-    EMBEDDINGS_API_URL   Por defecto: {LITELLM_BASE_URL}/v1/embeddings
+    EMBEDDINGS_API_URL   Por defecto: {LITELLM_BASE_URL}
     LITELLM_BASE_URL     Si no hay EMBEDDINGS_API_URL
     LITELLM_API_KEY      Bearer token
 """
@@ -35,8 +35,8 @@ def _default_embeddings_url() -> str:
     explicit = os.getenv("EMBEDDINGS_API_URL", "").strip()
     if explicit:
         return explicit.rstrip("/")
-    base = os.getenv("LITELLM_BASE_URL", "https://litellm.ctic.es").rstrip("/")
-    return f"{base}/v1/embeddings"
+    endpoint = os.getenv("LITELLM_BASE_URL", "https://litellm.ctic.es").rstrip("/")
+    return f"{endpoint}"
 
 
 def _build_data_url(image_path: Path, jpeg_quality: int | None) -> str:
@@ -78,7 +78,7 @@ def main() -> None:
     parser.add_argument(
         "--api-url",
         default=None,
-        help="URL completa del endpoint embeddings (default: env EMBEDDINGS_API_URL o LITELLM_BASE_URL/v1/embeddings)",
+        help="URL completa del endpoint embeddings (default: env EMBEDDINGS_API_URL o LITELLM_BASE_URL)",
     )
     parser.add_argument(
         "--token",
