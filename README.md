@@ -57,3 +57,9 @@ python3 test_language_model.py --model <nombre_modelo> --prompt "Tu pregunta aqu
 ```bash
 python3 test_multimodal_model.py --model <nombre_modelo> --prompt "Describe la imagen" --image <ruta_imagen>
 ```
+
+### Modelo de embeddings visuales
+
+```bash
+python3 scripts/test_embedder_image.py --model <nombre_modelo> --image <ruta_imagen> --jpeg-quality 75
+```
