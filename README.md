@@ -1,6 +1,6 @@
-# owui-request-sample
+# openai-request-sample
 
-Ejemplos de cliente para hacer llamadas a una API compatible con OpenAI Chat Completions (e.g. servida por OWUI).
+Ejemplos de cliente para hacer llamadas a una API compatible con OpenAI Chat Completions.
 
 ## Instalación
 
